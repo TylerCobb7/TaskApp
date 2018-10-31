@@ -5,4 +5,6 @@ class TasksController < ApplicationController
     def create
         render plain: params[:tasks].inspect
     end 
+    def show
+    end
 end
