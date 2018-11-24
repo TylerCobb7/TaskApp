@@ -1,7 +1,9 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Tasks</h1>
-<%= link_to 'New Task', new_task_path %>
+<p1><%= link_to 'New Task', new_task_path %>
+<%= link_to 'Home', controller: :welcome %>
+</p1>
 
 <table>
   <thead>
@@ -24,14 +26,16 @@
     <% end %>
   </tbody>
 </table>
+<h4>
 <%= month_calendar events: @tasks do |date, tasks| %>
   <%= date %>
 
   <% tasks.each do |tasks| %>
     <div>
-      <%= link_to "#{tasks.name}", edit_task_path(tasks)%>
+      <%= link_to "#{tasks.name}", tasks %>
     </div>
   <% end %>
+</h4>
 <% end %>
 
 
