@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   root 'welcome#index'
-  get  '/Task',    to: 'tasks#show'
-  get  '/New Task',   to: 'tasks#new'
-  get  '/signup',  to: 'users#new'
+  get  '/Task',     to: 'tasks#show'
+  get  '/New Task', to: 'tasks#new'
+  get  '/signup',   to: 'users#new'
+  post  '/signup',   to: 'users#create'
   resources :users
   get 'welcome/index'
   
