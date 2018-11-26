@@ -3,8 +3,7 @@ Rails.application.routes.draw do
   get  '/Task',    to: 'tasks#show'
   get  '/New Task',   to: 'tasks#new'
   get  '/signup',  to: 'users#new'
- 
-  resources :tasks
+  resources :users
   get 'welcome/index'
   
   resources :tasks
