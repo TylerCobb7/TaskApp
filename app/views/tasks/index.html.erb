@@ -9,7 +9,8 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th>Start time</th>
+      <th>&nbsp;&nbsp;&nbsp;&nbsp;Date &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Start Time</th>
+      <th></th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -27,9 +28,10 @@
   </tbody>
 </table>
 <h4>
+  
 <%= month_calendar events: @tasks do |date, tasks| %>
   <%= date %>
-
+  
   <% tasks.each do |tasks| %>
     <div>
       <%= link_to "#{tasks.name}", tasks %>
