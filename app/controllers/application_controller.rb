@@ -1,10 +1,7 @@
 class ApplicationController < ActionController::Base
+  require "active_support/all"
   protect_from_forgery with: :exception
   include SessionsHelper
-  before_action :set_time_zone, if: :current_user
-
-    def set_time_zone
-      Time.zone = current_user.time_zone
-    end
+  Time.zone.parse('2018-11-26 22:44:10')
   
 end
