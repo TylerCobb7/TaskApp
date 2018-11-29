@@ -1,8 +1,8 @@
-Feature: Sign up for app
+Feature: Successfully use app
   
   As a user
   So that I can successfully utilize this app
-  I want to be able to sign up 
+  I want to be able to sign up and creat new task
   
 Scenario: As a user I want to be able to navigate from the homepage to the sign up page
   Given I am on the homepage
@@ -12,8 +12,16 @@ Scenario: As a user I want to be able to navigate from the homepage to the sign 
   Then I should fill in "Password" field 
   Then I should fill in "Confirmation" field 
   When I press "Create my account" 
-  And I should see the "Name" field along with my avatar
+  Then I should see the "Name" field
   
-
+ Scenario: As a user I want to be able to add a new task
+  Given I am on the homepage
+  When I click "New Event"
+  Then I should fill in "Name" field
+  When I press "Create Task"
+  Then I should be on the "Task:" page
+  And I should see the "Comment" field
+  And I should see the "Body" field
+  When I press "Create Comment"
+  Then I should be on the "Task:" page
   
-
