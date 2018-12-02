@@ -1,7 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Tasks</h1>
-<table>
+<table style>
   <thead>
     <tr>
       <th>Name</th>
@@ -10,8 +9,9 @@
       <th colspan="3"></th>
     </tr>
   </thead>
-
+  
   <tbody>
+  
     <% @tasks.each do |task| %>
       <tr>
         <td><%= task.name %></td>
@@ -23,17 +23,21 @@
     <% end %>
   </tbody>
 </table>
-<h4>
-  
+
+
+  <h4>
 <%= month_calendar events: @tasks do |date, tasks| %>
-  <%= date %>
-  
+  <h5>  
+  <%= date.day %>
+  </h5>
   <% tasks.each do |tasks| %>
     <div>
+     
       <%= link_to "#{tasks.name}", tasks %>
     </div>
+    </h4>
   <% end %>
-</h4>
+
 <% end %>
 
 
