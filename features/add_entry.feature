@@ -25,3 +25,17 @@ Scenario: As a user I want to be able to navigate from the homepage to the sign 
   When I press "Create Comment"
   Then I should be on the "Task:" page
   
+ Scenario: As a user I want to be able to see my tasks with the Calendar view
+   Given I am on the homepage
+   When I click "Calendar"
+   Then I should be on the "Tasks" page
+   
+ Scenario: As a user I want to be able to login
+   Given I am on the homepage
+   When I click "Log in"
+   Then I should be on the "Log in" page
+   Then I should fill in "Email" field
+   Then I should fill in "Password" field
+   When I press "Log in"
+   Then I should be on the "" page
+   
